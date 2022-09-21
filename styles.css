@@ -10,19 +10,39 @@ html {
 
 body {
   height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+button {
+  background-color: cyan;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 15px;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(16, 50px);
-  grid-template-rows: repeat(16, 50px);
-  justify-content: center;
-}
-
-.square {
+  width: 750px;
+  height: 750px;
   border: 2px solid black;
 }
 
-.color {
-  background-color: blue;
+.square {
+  border: 1px solid black;
 }
