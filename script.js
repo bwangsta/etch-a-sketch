@@ -20,9 +20,17 @@ function draw() {
     const squares = document.querySelectorAll(".square");
     squares.forEach((square) => {
         square.addEventListener("mouseover", () => {
-            square.classList.add("color");
+            square.style.backgroundColor = selectRandomColor();
         });
     });
+}
+
+function selectRandomColor() {
+    let red = Math.random() * 255;
+    let green = Math.random() * 255;
+    let blue = Math.random() * 255;
+
+    return `rgb(${red}, ${green}, ${blue})`;
 }
 
 function main() {
